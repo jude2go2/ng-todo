@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CountdownConfig } from 'ngx-countdown';
 import { Subscription } from 'rxjs';
 import { ITodo } from 'src/app/models/todo.interface';
 import { TodoService } from 'src/app/services/todo.service';
@@ -19,15 +20,19 @@ export class TodoComponent implements OnInit {
 
   private _todo: ITodo;
 
-  constructor() {}
+  constructor(private todoService: TodoService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.todo.endDate);
+  }
 
   public onCompleteTodo(todo: ITodo): void {
-    todo.isCompleted = true;
+    // todo.isCompleted = true;
+    this.todoService.onTodoAction(todo.id, 'isCompleted');
   }
 
   public onArchiveTodo(): void {
     this.todo.isArchived = true;
+    this.todoService.onTodoAction(this.todo.id, 'isArchived');
   }
 }
