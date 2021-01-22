@@ -20,21 +20,21 @@ export class NewTodoComponent implements OnInit {
   public onNewTodoSubmit(): void {
     //create the new todo obj
     //send object to service
-    const formValues = this.form.form.value;
+    if (this.form.valid) {
+      const formValues = this.form.form.value;
 
-    const newTodo: ITodo = {
-      id: uuidv4(),
-      title: formValues.title,
-      description: formValues.description,
-      endDate: formValues.date,
-      isCompleted: false,
-      isArchived: false,
-      selected: false,
-    };
+      const newTodo: ITodo = {
+        id: uuidv4(),
+        title: formValues.title,
+        description: formValues.description,
+        endDate: formValues.date,
+        isCompleted: false,
+        isArchived: false,
+        selected: false,
+      };
 
-    this.todoService.addNewTodo(newTodo);
-    this.dialog.closeAll();
-    console.log('On Submit ');
-    console.log(this.form);
+      this.todoService.addNewTodo(newTodo);
+      this.dialog.closeAll();
+    }
   }
 }
