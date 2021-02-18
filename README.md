@@ -28,6 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 # Steps to configure Prettier:
+first ot all Install Prettier plugin on VSCode - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 1.  Open file explorer and paste this line in the address bar : `%APPDATA%\Code\User`
 2. You will find there a file named `settings.json` Open this fi
 3.  Paste the following code in it:
