@@ -37,7 +37,6 @@ first ot all Install Prettier plugin on VSCode - [Prettier](https://marketplace.
 ```
 {
   "git.confirmSync": false,
-  "window.zoomLevel": 0,
   "team.showWelcomeMessage": false,
   "tslint.autoFixOnSave": true,
   "javascript.format.enable": false,
@@ -65,6 +64,9 @@ first ot all Install Prettier plugin on VSCode - [Prettier](https://marketplace.
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {},
   "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  // "terminal.integrated.shell.windows": "C:\\Users\\yehudabu\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Windows PowerShell\\powershell.exe",
+  "terminal.integrated.windowsEnableConpty": false,
+  // "terminal.integrated.shell.windows": "C:PROGRA~1Git\\bin\\bash.exe",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "peacock.favoriteColors": [
     {
@@ -106,8 +108,10 @@ first ot all Install Prettier plugin on VSCode - [Prettier](https://marketplace.
   ],
   "git.autofetch": true,
   "extensions.ignoreRecommendations": false,
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "security.workspace.trust.untrustedFiles": "open"
 }
+
 ```
 
 4. Refresh vscode
